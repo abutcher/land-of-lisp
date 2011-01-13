@@ -64,6 +64,18 @@
 	     (princ x)
 	     (princ " health points! "))))
 
+(defmethod monster-burn (m x)
+  (decf (monster-health m) x)
+  (if (monster-dead m)
+      (progn (princ "You burned the ")
+	     (princ (type-of m))
+	     (princ " to death! "))
+      (progn (princ "You swing your torch at the ")
+	     (princ (type-of m))
+	     (princ ", knocking off ")
+	     (princ x)
+	     (princ " health points! "))))
+
 (defmethod monster-show (m)
   (princ "A fierce ")
   (princ (type-of m)))
