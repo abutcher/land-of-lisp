@@ -140,3 +140,19 @@
 	  ((= x *player-strength*)
 	   (princ "A brigand cuts your arm with his whip, taking off 2 strength points! ")
 	   (decf *player-strength* 2)))))
+
+(defstruct (troll (:include monster)) (regeneration (randval 3)))
+(push #'make-troll *monster-builders*)
+
+(defmethod monster-show ((m troll))
+  (princ "A cackling troll. "))
+
+(defmethod monster-attack ((m troll))
+  (let ((x (troll-regeneration m)))
+    (princ "A troll cackles maniacally as he regenerates ")
+    (princ x)
+    (princ " health points! ")
+    (incf (monster-health m) x)
+    (princ "He swipes his claws at you, taking off 2 health points! ")    
+    (decf *player-health* 2)))
+
