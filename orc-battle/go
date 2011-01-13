@@ -1,0 +1,3 @@
+[ -f go_bash ] && bash go_bash
+nice -n 20 sh go_lisp
+[ -f stop_bash ] && bash stop_bash

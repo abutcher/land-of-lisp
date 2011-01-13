@@ -1,0 +1,8 @@
+h1. The Programs from Land of Lisp
+
+h2. Orc Battle
+
+Make sure you have clisp installed.  SBCL was clipping some of my newlines so I just went with clisp.
+
+bq. cd orc-battle
+bq. go

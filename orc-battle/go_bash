@@ -1,0 +1,9 @@
+#I contain all the things you want do in bash BEFORE the lisp is called.
+
+report() {
+	for i in $*; do
+       echo ""
+       echo "=====|  $i |============================"
+       cat $i
+     done
+}
