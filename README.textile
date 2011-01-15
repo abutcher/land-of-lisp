@@ -5,4 +5,4 @@ h2. Orc Battle
 Make sure you have clisp installed.  SBCL was clipping some of my newlines so I just went with clisp.
 
 bq.  cd orc-battle 
-     go
+     ./go
